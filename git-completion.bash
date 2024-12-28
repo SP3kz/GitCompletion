@@ -463,6 +463,7 @@ __gitcomp ()
 if [[ -n ${ZSH_VERSION-} ]]; then
 	unset ${(M)${(k)parameters[@]}:#__gitcomp_builtin_*} 2>/dev/null
 else
+	# Use bash-compatible syntax
 	unset $(compgen -v __gitcomp_builtin_)
 fi
 
